@@ -104,7 +104,8 @@ function esEntero(num) {
    // Ejemplo: (-10) ---> true
    // De lo contrario, retorna false.
    // Tu código:
-   return (num % 2 === 0);
+   
+   return (num % 1 === 0);
 }
 
 function fizzBuzz(num) {
@@ -152,18 +153,33 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
+   if(num <= 1){
+      return false;
+   }
+   for(var i = 2; num>i; i++){
+      if(num % i === 0 ){
+         return false;
+      }
+   }
+   return true;
 }
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
+   if(valor===true){
+      return "Soy verdadero";
+   }
+   return "Soy falso";
 }
 
 function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
+   
+   return (num.toString().length)==3; 
 }
 
 function doWhile(num) {
@@ -171,6 +187,12 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   var i=0;
+   do{
+      num = num + 5;
+      i++;
+   }while(i<8);
+   return num;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
